@@ -101,7 +101,7 @@ useEffect(()=>{
                  
                   {borders.length>0 ? borders.map((border,i)=>{
                 return (
-                  <Link to={`/border/${name.toLowerCase()}`}>
+                  <Link to={`/code/${border.toLowerCase()}`}>
                     <button key={i}>{border}</button>
                   </Link>
                 );

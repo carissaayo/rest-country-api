@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./CountryScreen.css";
+import "./BorderCountryScreen.css";
 import { useGlobalContext } from "../Context";
 
 const CountryScreen = () => {
   const { setLoading } = useGlobalContext();
-  const { name } = useParams();
-  const url = `https://restcountries.eu/rest/v2/name/`;
+  const { border } = useParams();
+  const url = `https://restcountries.eu/rest/v2/alpha/`;
   const [country, setCountry] = useState([]);
   const fetchCountry = async () => {
     try {
-      const response = await fetch(url + name.toLowerCase());
+      const response = await fetch(url + border.toLowerCase());
       const data = await response.json();
-      setCountry(data);
+      setCountry([data]);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -20,7 +20,7 @@ const CountryScreen = () => {
   };
   useEffect(() => {
     fetchCountry();
-  }, [name]);
+  }, [border]);
 
   return (
     <main className="country-screen">
@@ -38,6 +38,7 @@ const CountryScreen = () => {
         country.map((countryDetails, i) => {
           const {
             flag,
+            name,
             nativeName,
             region,
             subregion,
@@ -100,7 +101,7 @@ const CountryScreen = () => {
                   {borders.length > 0
                     ? borders.map((border, i) => {
                         return (
-                          <Link to={`/code/${name.toLowerCase()}`}>
+                          <Link to={`/code/${border.toLowerCase()}`}>
                             <button key={i}>{border}</button>
                           </Link>
                         );

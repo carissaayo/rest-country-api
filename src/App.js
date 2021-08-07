@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Countries} />
           <Route path="/country/:name" component={CountryScreen} />
-          <Route path="/border/:name" component={BorderCountryScreen} />
+          <Route path="/code/:border" component={BorderCountryScreen} />
         </Switch>
       </div>
     </Router>
