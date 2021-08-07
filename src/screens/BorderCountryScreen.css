@@ -1,0 +1,175 @@
+.country-screen {
+  background-color: white;
+  padding: 30px 7%;
+  text-align: left;
+  text-transform: capitalize;
+  height:fit-content;
+}
+.btn-con {
+  margin: 50px 0px 100px;
+  width: 180px;
+}
+.btn-con button {
+  text-align: left;
+  cursor: pointer;
+  width: 180px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+.btn-con button span > img {
+  width: 20px;
+}
+.btn-con button span {
+  margin-right: 6px;
+}
+.grid-con {
+  display: grid;
+  grid-template-columns:500px repeat(2,1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "image info level"
+    "image info level"
+    "image border border";
+  column-gap: 50px;
+  background-color: inherit;
+}
+
+.grid-con .image-con {
+  grid-area: image;
+}
+.image-con img{
+    height:400px;
+    width:500px;
+    
+}
+
+.grid-con .country-info-con {
+  grid-area: info;
+  margin-bottom: 40px;
+  padding-top: 30px;
+}
+.country-info-con > h4 {
+  margin-bottom: 30px;
+}
+.country-info-con > *,
+.level-con > * {
+  margin-bottom: 10px;
+}
+
+.grid-con .level-con {
+  grid-area: level;
+
+  padding-top: 70px;
+  margin-bottom: 30px;
+}
+.grid-con .level-con > div > span{
+  margin-right: 10px;
+}
+.grid-con .level-con > div >p {
+  display: inline-block;
+}
+
+.grid-con .border-countries-con {
+  grid-area: border;
+  display: flex;
+}
+.grid-con span{
+  font-weight: 700;
+}
+.border-countries-con  > span {
+  margin-right: 10px;
+  padding-top: 5px;
+  width:180px
+}
+
+.border-btn-con button {
+  margin-right: 15px;
+  width: 70px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+
+.dark-mode  .country-screen{
+  background-color: hsl(207, 26%, 17%);
+  color:hsl(0, 0%, 100%);
+}
+
+.dark-mode .country-screen button{
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 2px 2px hsl(209, 30%, 26%) ;
+  border-color:hsl(209, 30%, 26%) ;
+}
+
+@media (max-width:1320px){
+    .grid-con{
+        grid-template-columns:400px repeat(2,1fr);
+    }
+    .image-con img{
+    width:400px;
+    
+}
+}
+
+@media (max-width:1200px){
+  .country-screen{
+    height:fit-content;
+  }  
+  .grid-con{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 300px;
+        grid-template-areas: 
+        'image image'
+        'info level'
+        'border border';
+
+    }
+    .image-con {
+    grid-area: image;
+}
+
+}
+
+@media screen and (max-width:800px) {
+  .grid-con .border-countries-con .border-btn-con{
+      display: grid;
+      grid-template-columns:  repeat(4,80px);
+      column-gap: 20px;
+      
+  }
+}@media screen and (max-width:800px) {
+  .grid-con .border-countries-con .border-btn-con{
+      display: grid;
+      grid-template-columns:  repeat(3,80px);
+      column-gap: 20px;
+      
+  }
+}
+@media screen and (max-width:570px) {
+  .grid-con{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 300px  200px 100px;
+        grid-template-areas: 
+        'image image'
+        'info info'
+        'level level'
+        'border border';
+    }
+    .grid-con .level-con {
+      padding-top: 20px;
+    }
+    .grid-con .border-countries-con{
+      display: block;
+    }
+    .grid-con .border-countries-con .border-btn-con{
+      margin-top: 10px;
+    }
+}
+@media screen and (max-width:500px) {
+  .image-con img{
+    width:340px
+  }
+}
