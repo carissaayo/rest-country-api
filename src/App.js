@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Countries from "./components/Countries";
+import CountryScreen  from "./components/CountryScreen";
+import BorderCountryScreen from "./screens/BorderCountryScreen";
 
+import {useGlobalContext} from './Context'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const {darkMode,loading} = useGlobalContext()
+  
+  return loading ? (
+    <h1 className="loading">loading...</h1>
+  ) : (
+    <Router>
+      <div className={`${darkMode ? "App dark-mode" : "App"}`}>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Countries} />
+          <Route path="/country/:name" component={CountryScreen} />
+          <Route path="/border/:name" component={BorderCountryScreen} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

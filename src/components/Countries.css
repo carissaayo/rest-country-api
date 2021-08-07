@@ -1,0 +1,63 @@
+.countries{
+   padding:0 7%;
+   padding-top:30px;
+background-color:hsl(0, 0%, 98%);
+
+color: hsl(200, 15%, 8%);
+}
+ 
+.countries .countries-con{
+    margin-top:30px;
+    display: grid;
+    height:100%;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 30px;
+    row-gap: 30px;
+}
+a{
+    text-decoration: none;
+    color:hsl(0, 0%, 100%)
+}
+.dark-mode .countries{
+    background-color: hsl(207, 26%, 17%);
+    color:hsl(0, 0%, 100%);
+    
+    
+}
+
+@media  (max-width:1250px) {
+    .countries .countries-con{
+          grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media  (max-width:980px) {
+    .countries .countries-con{
+          grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* mobile styles */
+@media  (max-width:700px) {
+    .countries .countries-con{
+          grid-template-columns: repeat(1,1fr);
+          padding:0 7%;
+    }
+    .countries{
+          padding:0px 10%;
+
+}
+
+}
+
+
+
+/* 
+Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+ */

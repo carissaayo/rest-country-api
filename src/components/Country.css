@@ -1,0 +1,41 @@
+.country-con{
+    background-color: white;
+}
+
+.country-info{
+    text-align: left;
+    padding:20px 30px;
+}
+.country-con > .img-con{
+    height:240px;
+}
+.country-con > .img-con img{
+object-fit: contain;
+width: 100%;
+}
+.country-info >*{
+    padding-bottom:10px;
+}
+.country-info span{
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.country-con  a{
+color: hsl(200, 15%, 8%);
+    
+}
+a{
+    text-decoration: none;
+color: hsl(200, 15%, 8%);
+  
+}
+.dark-mode .countries .countries-con .country-con{
+    background-color: hsl(209, 23%, 22%);
+    
+}
+.dark-mode a{
+    color:white
+}
