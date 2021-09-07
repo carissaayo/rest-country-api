@@ -8,7 +8,7 @@ const url = `https://restcountries.eu/rest/v2/region/`;
 const Search=() =>{
 const {setSearchTerm,setFilterTerm, filterTerm, setCountries,countries,searchTerm,loading,setLoading} = useGlobalContext();
 
- const fetchByRegion = useCallback( async ()=>{
+ const fetchByRegion =  async ()=>{
   try {
      const response = await fetch(url
       + filterTerm.toLowerCase());
@@ -19,14 +19,14 @@ const {setSearchTerm,setFilterTerm, filterTerm, setCountries,countries,searchTer
     console.log(error);
 
   }
- },[filterTerm])
+ }
  
  useEffect(()=>{
    
 
   fetchByRegion();
  
- },[filterTerm,fetchByRegion])
+ },[filterTerm])
 
  useEffect(()=>{
 
