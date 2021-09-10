@@ -1,6 +1,6 @@
 import './Search.css';
 import {useGlobalContext} from '../Context';
-import { useEffect,useCallback } from 'react';
+import { useEffect } from 'react';
 const url = `https://restcountries.eu/rest/v2/region/`;
 
 

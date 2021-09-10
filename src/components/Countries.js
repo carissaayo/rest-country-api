@@ -4,6 +4,7 @@ import Search from "./Search";
 import {useGlobalContext} from '../Context';
 const Countries=() =>{
  const {countries} = useGlobalContext(); 
+
     return (
       <div className="countries">
         <Search />
