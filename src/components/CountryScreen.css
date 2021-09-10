@@ -167,10 +167,14 @@
     .grid-con .border-countries-con .border-btn-con{
       margin-top: 10px;
     }
+     .image-con img{
+    width:300px;
+  
+  }
 }
-@media screen and (max-width:500px) {
+/* @media screen and (max-width:500px) {
   .image-con img{
     width:300px;
     display:none
   }
-}
+} */
