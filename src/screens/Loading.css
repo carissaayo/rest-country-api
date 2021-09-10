@@ -1,0 +1,22 @@
+.loading h1{
+  position: absolute;
+  top:50%;
+  left:40%;
+  height: 100%;
+  width:100%;
+  font-size: 4rem;
+}
+@media  (max-width:700px) {
+    .loading h1{
+      font-size:3rem;
+    }
+
+}
+
+@media  (max-width:500px) {
+    .loading{
+      font-size:3rem;
+      left:30px;
+    }
+
+}
