@@ -4,13 +4,13 @@ import Header from "./components/Header";
 import Countries from "./components/Countries";
 import CountryScreen  from "./components/CountryScreen";
 import BorderCountryScreen from "./screens/BorderCountryScreen";
-
+import Loading from "./screens/Loading"
 import {useGlobalContext} from './Context'
 function App() {
   const {darkMode,loading} = useGlobalContext()
   
   return loading ? (
-    <h1 className="loading">loading...</h1>
+    <Loading/>
   ) : (
     <Router>
       <div className={`${darkMode ? "App dark-mode" : "App"}`}>

@@ -17,17 +17,5 @@ button{
   background-color: black;
   height: 100vh;
 }
-.loading{
-  position: absolute;
-  top:50%;
-  left:30%;
-  height: 100%;
-  width:100%;
-  font-size: 4rem;
-}
-@media  (max-width:700px) {
-    .loading{
-      font-size:3rem;
-    }
 
-}
+
