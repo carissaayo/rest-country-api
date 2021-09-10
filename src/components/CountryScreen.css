@@ -168,7 +168,13 @@
       margin-top: 10px;
     }
      .image-con img{
-    width:70%;
+    width:340px;
   
   }
+}
+@media screen and (max-width:400px) {
+  .image-con img{
+    display: none;
+  }
+  
 }
